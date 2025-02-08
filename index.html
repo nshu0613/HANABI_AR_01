@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs="patternRatio:0.90" vr-mode-ui="enabled: false">
+      <a-marker
+        type="pattern"
+        url="https://cdn.glitch.global/a745c0e5-2b68-406e-97d0-dcc905c80052/pattern-QR_571589.patt?v=1733571703320"
+      >
+        <a-image
+          id="profile"
+          width="1.7"
+          height="1.2"
+          position="-1 0 -0.7"
+          rotation="270 0 0"
+          src="https://cdn.glitch.global/a745c0e5-2b68-406e-97d0-dcc905c80052/%E3%81%BF%E3%81%99%E3%81%A1%E3%82%8B%E3%82%A2%E3%83%BC%E5%86%99.jpg?v=1734430253236"
+          link="href: https://www.mrchildren.jp"
+        ></a-image>
+        <a-image
+          id="ar-iamge1"
+          width="1.6"
+          height="1.6"
+          position="-1 0 0.9"
+          rotation="270 0 0"
+          src="https://cdn.glitch.global/a745c0e5-2b68-406e-97d0-dcc905c80052/%E8%8A%B1%E7%81%AB%E3%80%80%E3%82%B7%E3%82%99%E3%83%A3%E3%82%B1.png?v=1733573726714"
+        ></a-image>
+        <a-image
+          id="ar-image2"
+          width="1.8"
+          height="3.2"
+          position="1 0 0.3"
+          rotation="270 0 0"
+          src="https://cdn.glitch.global/a745c0e5-2b68-406e-97d0-dcc905c80052/%E8%8A%B1%E7%81%AB-5.png?v=1734428994800"
+          link="href: https://cdn.glitch.global/a745c0e5-2b68-406e-97d0-dcc905c80052/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A-6.png?v=1734627253831"
+        ></a-image>
+      </a-marker>
+      <a-entity camera cursor="fuse: false; rayOrigin: mouse;"></a-entity>
+      <script>
+        document.addEventListener("click", function () {
+          let obj = document.getElementById("ar-object");
+          obj.setAttribute("visible", !obj.getAttribute("visible"));
+        });
+      </script>
+    </a-scene>
+  </body>
+</html>
